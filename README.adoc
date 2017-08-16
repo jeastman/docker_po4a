@@ -1,0 +1,35 @@
+= po4a
+
+Utilize the latest build of po4a in a container.
+
+== Usage
+
+To run the po4a command, run the container as follows:
+
+ docker run -it --rm -v `pwd`:/src jmeastman/po4a [options] config_file
+
+Alternatively, you can create a local script to execute it:
+
+ docker pull jmeastman/po4a
+ echo docker run -it -rm -v \`pwd\`:/src jmeastman/po4a $* > /usr/local/bin/po4a
+
+For information on how to use po4a,
+see the https://po4a.alioth.debian.org/man/man1/po4a.1.php[man page].
+
+== Building
+
+Clone the repository
+
+ git clone jeastman/docker_po4a
+
+Change to the directory
+
+ cd docker_po4a
+
+Build the image
+
+ docker build -t jmeastman/po4a .
+
+== License
+
+LICENSE is the same as https://po4a.alioth.debian.org/[po4a]
